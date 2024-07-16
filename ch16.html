@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>頁面標題</title>
+    
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- 可以在這裡添加其他的元數據（meta）、樣式（CSS）、腳本（JavaScript）等 -->
+</head>
+<body>
+    <!-- 網頁架構 由page 定義區塊顯示在瀏覽頁 header定義上方標題 content定義內容 footer定義頁尾 -->
+    <!-- 超連結資源 一樣用a標籤 -->
+    <!--href="tel:電話號碼" 指定撥打電話  href="sms:電話？body=簡訊內容" 指定發送簡訊  href="mailto:a0908463504@gmail.com?subject=標題&body=哈哈" 指定發送信相 href="網頁檔名" 連結指定網頁  href="＃id" 切換至id <div> 界面-->
+    <!--載a裡面包入 data-transition可以控制轉場特效  -->
+    <div data-role="page" id="page-main">
+        <div data-role="header"> 
+            <h3>大財權購物網</h3>
+        </div> 
+        <div data-role="content"> 
+            <p>歡迎光臨</p>
+            <a href="#page-present">前往聯絡方式</a>
+            <p><a href="#page-present" data-transition="slide">右方滑入</a></p>
+            <p><a href="#page-present" data-transition="slideup">下方滑入</a></p>
+            <p><a href="#page-present" data-transition="slidedown">上方滑入</a></p>
+            <p><a href="#page-present" data-transition="pop">彈出</a></p>
+            <p><a href="#page-present" data-transition="fade">淡入淡出</a></p>
+            <p><a href="#page-present" data-transition="flip">3d翻轉</a></p>
+            <p><a href="#page-present" data-rel="dialog">對話方塊彈出新頁面</a></p>
+            <p><a href="https://drive.google.com/drive/u/2/home" data-ajax="false">大財權粉絲專頁</a></p>
+            <!-- 取消ajax 跳轉到新網頁 若傳送資料到另一個網頁時建議使用此功能 -->
+            <ul data-role="listview" data-inset="true">
+                <!-- data-inset="true" 以圓角外框呈現-->
+                <li data-role="list-divider">購物專區</li>
+                <!-- list-divider 以標題呈現 -->
+                <li>
+                    購物車
+                    <span class="ui-li-count">3</span>
+                    <!-- ui-li-count 標籤設計提示氣泡 -->
+                </li>
+                <li>
+                    待出貨
+                    <span class="ui-li-count">3</span>
+                    <!-- ui-li-count 標籤設計提示氣泡 -->
+                </li>
+                <li>購買記錄</li>
+                <li>退貨紀錄</li>
+            </ul>
+            <ul data-role="listview" data-inset="true">
+                <!-- data-inset="true" 以圓角外框呈現-->
+                <li data-role="list-divider">會員專區</li>
+                <!-- list-divider 以標題呈現 -->
+                <li>
+                    我的評價
+                    <span class="ui-li-count">3</span>
+                    <!-- ui-li-count 標籤設計提示氣泡 -->
+                </li>
+                <li>
+                    留言紀錄
+                    <span class="ui-li-count">3</span>
+                    <!-- ui-li-count 標籤設計提示氣泡 -->
+                </li>
+                <li>瀏覽紀錄</li>
+                <li>更新資料</li>
+            </ul>
+            <ul data-role="listview" data-filter="true" data-filter-placeholder="請輸入關鍵字">
+                <!-- 加入搜尋框 -->
+                <li>
+                    <img src="ps4.jpg" alt="ps4">
+                    <h3>ps4</h3>
+                    <p>驚爆價：28800</p>
+                </li>
+                <li>
+                    <img src="switch.jpg" alt="switch">
+                    <!-- 也可加入圖片 長寬都一樣比較好 -->
+                    <h3>switch</h3>
+                    <p>驚爆價：14000</p>
+                </li>
+            </ul>
+
+            <div data-role="collapsible-set">
+                <!-- data-role="collapsible-set"將摺疊區塊放入群組 -->
+                <div data-role="collapsible">
+                    <!-- data-role="collapsible"  建立可摺別區塊元件-->
+                    <h3>
+                        xbox one
+                    </h3>
+                    <div style="text-align: center;">
+                        <p>
+                            <img src="xboxone.jpg" style="max-width: 90%;">
+                        </p>
+                        <p>xbox one</p>
+                        <p>3600</p>
+                    </div>
+                </div>
+                <div data-role="collapsible">
+                    <!-- data-role="collapsible"  建立可摺別區塊元件-->
+                    <h3>
+                      ps4
+                    </h3>
+                    <div style="text-align: center;">
+                        <p>
+                            <img src="xboxone.jpg" style="max-width: 90%;">
+                        </p>
+                        <p>ps4</p>
+                        <p>3600</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed"> 
+            <!-- data positionfixed 就會將該區塊永遠顯示在那邊 -->
+            <div data-role="navbar">
+                <!-- data-role="navbar" 建立導覽元件-->
+                <ul>
+                    <li><a href="#page-present" data-icon="home">首頁</a></li>
+                    <li><a href="#page-present" data-icon="check">會員專區</a></li>
+                    <li><a href="#page-present" data-icon="forward">商品</a></li>
+                </ul>
+            </div>
+            <h3>輕鬆購物你看得見</h3>
+        </div>
+    </div>
+
+    <div data-role="page" id="page-present">
+        <div data-role="header"> 
+            <h3>聯絡方式</h3>
+        </div> 
+        <div data-role="content">
+            <a href="tel:0973005153"><p>1.聯絡大財權</p></a>
+            <a href="sms:0986669586?body=簡訊內容"><p>2.發送簡訊</p></a>
+            <a href="mailto:a0908463504@gmail.com?subject=標題&body=哈哈"><p>3.讀者來信</p></a>
+            <p><a href="#page-main" data-role="button">返回</a></p>
+        </div>
+        <div data-role="footer" data-position="fixed"> 
+            <h3>輕鬆購物你看得見</h3>
+        </div>
+    </div>
+</body>
+</html>
